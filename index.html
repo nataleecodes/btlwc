@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sick of Chilli</title>
+</head>
+<body>
+    <header>    
+        <h1>Meal Prep Inspo Machine</h1>
+        <p>Sick of chilli? Find something else to make. Meal prep like a boss!</p>
+    </header>
+
+    <main>
+        <form class="timeForm" action="" method="GET">
+            <div class="question question1">
+                <h2>How much time do you have?</h2>
+                
+                <input id="twentyMins" name="time" type="radio" value="twentyMins" required>
+                <label for="twentyMins">20 mins</label>
+                
+                <input id="oneHour" name="time" type="radio" value="oneHour" required>
+                <label for="oneHour">1 hr</label>
+
+                <input id="sundays" name="time" type="radio" value="sunday" required> 
+                <label for="sundays">My Sundays are sacred meal prep days.</label>
+            </div>
+            <!-- TODO What goes in action? -->
+            
+            <div class="question question2">
+                <h2>Which protein are you craving?</h2>
+                <input id="beans" name="protein" type="radio" value="beans" required>
+                <label for="beans">Beans!</label>
+
+                <input id="shrimp" name="protein" type="radio" value="shrimp" required>
+                <label for="shrimp">Shrimp</label>
+
+                <input id="bird" name="protein" type="radio" value="bird" required>
+                <label for="bird">Some kind of bird</label>
+
+                <input id="redMeat" name="protein" type="radio" value="redMeat" required>
+                <label for="redMeat">Red meat</label> 
+            </div>
+<!-- 
+            TODO if done early -->
+            <!-- <h2>And my name is</h2>
+            <input id="name" name="name" type="text" required> -->
+
+            <input type="submit">
+        </form>
+
+        <div class="answer-wrapper">
+            <h2 class="answer">You should eat</h2>
+        </div>
+        
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
