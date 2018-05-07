@@ -49,8 +49,10 @@ app.sortRecipesByProteinChosen = function(protein, sortedRecipesByTime){
         .map((recipe) => {
             return recipe;
         });
-    console.log(finalRecipe);
-    $('.answer').text(`some ${finalRecipe[0].name}`);
+    console.log(finalRecipe)
+    console.log(finalRecipe[0].link);
+    $('#answer').text(`some ${finalRecipe[0].name}`);
+    $('#answer-link').attr('href', `${finalRecipe[0].link}`);
 };
 
 app.init = function () {
@@ -59,7 +61,6 @@ app.init = function () {
 
 $(function() {
     app.init();
-    
 });
 
 
@@ -78,37 +79,37 @@ app.recipes = [
         time: 'quickie',
         protein: 'bean',
         description: 'Witty description of the meal in less than 30 words followed by a link: ',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     },
     {
         name: 'rec2',
         time: 'oneHour',
         protein: 'bean',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     },
     {
         name: 'rec3',
         time: 'sunday',
         protein: 'bean',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     },
     {
         name: 'rec4',
         time: 'thirtyMins',
         protein: 'shrimp',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     }, 
     {
         name: 'rec5',
         time: 'oneHour',
         protein: 'shrimp',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     }, 
     {
         name: 'rec6',
         time: 'sunday',
         protein: 'shrimp',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     },
     {
         name: 'Honey-Sriracha Glazed Meatballs',
@@ -120,30 +121,30 @@ app.recipes = [
         name: 'rec8',
         time: 'oneHour',
         protein: 'bird',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/3'
     }, 
     {
         name: 'rec9',
         time: 'sunday',
         protein: 'bird',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     },
     {
         name: 'rec10',
         time: 'quickie',
         protein: 'redMeat',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     }, 
     {
         name: 'rec11',
         time: 'oneHour',
         protein: 'redMeat',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     }, 
     {
         name: 'rec12',
         time: 'sunday',
         protein: 'redMeat',
-        link: 'http://www.instagram.com/recipe123'
+        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     }
 ];

@@ -11,14 +11,16 @@ h1, h2 {
 h1 {
     font-size: 3.6rem;
     letter-spacing: 0.2rem;
+    line-height: 3.2rem;
 }
 
 h2 {
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
+    line-height: 2rem;
 }
 
-p, label {
+body {
     font-family: 'Hind', 'Arial Narrow', sans-serif;
     font-size: 1.5rem;
     line-height: 2.4rem;
@@ -33,4 +35,10 @@ input[type=submit]{
     border-radius: 0;
     background: #ffdd22;
     padding: 10px 20px;
+    margin-top: 20px;
+    font-weight: 900;
 }
+
+// .answer {
+//     display: none;
+// }

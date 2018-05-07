@@ -18,28 +18,28 @@
             <div class="question question1">
                 <h2>How much time do you have?</h2>
                 
-                <input id="quickie" name="time" type="radio" value="quickie" required>
-                <label for="quickie">Under 1 hour</label>
+                <input id="quickie" name="time" type="radio" value="quickie" required checked="checked">
+                <label for="quickie">Under 1 hr</label>
                 
-                <input id="oneHour" name="time" type="radio" value="oneHour" requred>
-                <label for="oneHour">1 to 2 hours</label>
+                <input id="oneHour" name="time" type="radio" value="oneHour" required checked="checked">
+                <label for="oneHour">1 to 2 hrs</label>
 
-                <input id="sundays" name="time" type="radio" value="sunday" required> 
-                <label for="sundays">My Sundays are sacred meal prep days.</label>
+                <input id="sundays" name="time" type="radio" value="sunday" required checked="checked">
+                <label for="sundays">Sundays are sacred meal prep days.</label>
             </div>
             
             <div class="question question2">
                 <h2>Which protein do you prefer?</h2>
-                <input id="beans" name="protein" type="radio" value="beans" required>
+                <input id="beans" name="protein" type="radio" value="beans" required checked="checked">
                 <label for="beans">Beans or Tofu</label>
 
-                <input id="shrimp" name="protein" type="radio" value="shrimp" required>
+                <input id="shrimp" name="protein" type="radio" value="shrimp" required checked="checked">
                 <label for="shrimp">Shrimp</label>
 
-                <input id="bird" name="protein" type="radio" value="bird" required>
-                <label for="bird">Some kind of bird</label>
+                <input id="bird" name="protein" type="radio" value="bird" required checked="checked">
+                <label for="bird">Poultry</label>
 
-                <input id="redMeat" name="protein" type="radio" value="redMeat" required>
+                <input id="redMeat" name="protein" type="radio" value="redMeat" required checked="checked">
                 <label for="redMeat">Red meat</label> 
             </div>
 
@@ -47,7 +47,11 @@
             </form>
 
             <div class="answer-wrapper">
-                <h2 class="answer">You should eat</h2>
+                <p>This week try some 
+                    <a id="answer-link" href="">
+                        <span id="answer">...</span>
+                    </a>
+                </p>
             </div>
             
         </main>
