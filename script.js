@@ -75,7 +75,7 @@ app.recipes = [
     {
         name: 'rec1',
         title: 'FastBeans',
-        time: 'twentyMins',
+        time: 'quickie',
         protein: 'bean',
         description: 'Witty description of the meal in less than 30 words followed by a link: ',
         link: 'http://www.instagram.com/recipe123'
@@ -94,7 +94,7 @@ app.recipes = [
     },
     {
         name: 'rec4',
-        time: 'twentyMins',
+        time: 'thirtyMins',
         protein: 'shrimp',
         link: 'http://www.instagram.com/recipe123'
     }, 
@@ -111,10 +111,10 @@ app.recipes = [
         link: 'http://www.instagram.com/recipe123'
     },
     {
-        name: 'rec7',
-        time: 'twentyMins',
+        name: 'Honey-Sriracha Glazed Meatballs',
+        time: 'quickie',
         protein: 'bird',
-        link: 'http://www.instagram.com/recipe123'
+        link:'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     }, 
     {
         name: 'rec8',
@@ -130,7 +130,7 @@ app.recipes = [
     },
     {
         name: 'rec10',
-        time: 'twentyMins',
+        time: 'quickie',
         protein: 'redMeat',
         link: 'http://www.instagram.com/recipe123'
     }, 

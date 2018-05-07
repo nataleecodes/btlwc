@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Hind|Montserrat:900" rel="stylesheet">
-    <title>Sick of Chilli</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Let's Get Cooking</title>
 </head>
 <body>
-    <header>    
-        <h1>Meal Prep Inspo Machine</h1>
-        <p>Sick of chilli? Find something else to make. Meal prep like a boss!</p>
-    </header>
+    <div class="container">
 
-    <main>
-        <form class="timeForm" action="" method="GET">
+        <main>
+        <h1>Let's Get Cooking</h1>
+        <p>Meal prepping is an awesome way to save money and stay healthy. Use this quiz to home in on recipes that fit your schedule & your tastes. Chop to it!</p>
+        <form class="quizForm" action="" method="GET">
             <div class="question question1">
                 <h2>How much time do you have?</h2>
                 
-                <input id="twentyMins" name="time" type="radio" value="twentyMins" required>
-                <label for="twentyMins">20 mins</label>
+                <input id="quickie" name="time" type="radio" value="quickie" required>
+                <label for="quickie">Under 1 hour</label>
                 
-                <input id="oneHour" name="time" type="radio" value="oneHour" required>
-                <label for="oneHour">1 hr</label>
+                <input id="oneHour" name="time" type="radio" value="oneHour" requred>
+                <label for="oneHour">1 to 2 hours</label>
 
                 <input id="sundays" name="time" type="radio" value="sunday" required> 
                 <label for="sundays">My Sundays are sacred meal prep days.</label>
             </div>
-            <!-- TODO What goes in action? -->
             
             <div class="question question2">
-                <h2>Which protein are you craving?</h2>
+                <h2>Which protein do you prefer?</h2>
                 <input id="beans" name="protein" type="radio" value="beans" required>
-                <label for="beans">Beans!</label>
+                <label for="beans">Beans or Tofu</label>
 
                 <input id="shrimp" name="protein" type="radio" value="shrimp" required>
                 <label for="shrimp">Shrimp</label>
@@ -43,21 +42,18 @@
                 <input id="redMeat" name="protein" type="radio" value="redMeat" required>
                 <label for="redMeat">Red meat</label> 
             </div>
-<!-- 
-            TODO if done early -->
-            <!-- <h2>And my name is</h2>
-            <input id="name" name="name" type="text" required> -->
 
-            <input type="submit">
-        </form>
+                <input type="submit" name="submit" value="Giddyup">
+            </form>
 
-        <div class="answer-wrapper">
-            <h2 class="answer">You should eat</h2>
-        </div>
-        
-    </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="script.js"></script>
+            <div class="answer-wrapper">
+                <h2 class="answer">You should eat</h2>
+            </div>
+            
+        </main>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </div> <!--END CSS GRID CONTAINER-->
 </body>
 
 </html>

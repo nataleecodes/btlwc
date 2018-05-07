@@ -1,3 +1,42 @@
 @import 'setup';
 @import 'utils';
 @import 'typography';
+
+body {
+    background: #fafafa;
+}
+
+.container {
+    height: 100vh;
+    background-image: url("../assets/foodbkg.jpeg");
+    max-width: 75%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.99);
+    padding: 70px;
+    height: 90%;
+    max-width: 60%;
+}
+
+.quizForm {
+    
+}
+
+
+
+
+/*=========================================
+MEDIA QUERIES
+==========================================*/
+
+
+// media (max-width: 480px) {
+
+// }
