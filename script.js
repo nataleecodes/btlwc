@@ -51,7 +51,7 @@ app.sortRecipesByProteinChosen = function(protein, sortedRecipesByTime){
         });
     console.log(finalRecipe)
     console.log(finalRecipe[0].link);
-    $('#answer').text(`some ${finalRecipe[0].name}`);
+    $('#answer').text(`${finalRecipe[0].name}`);
     $('#answer-link').attr('href', `${finalRecipe[0].link}`);
 };
 
@@ -64,52 +64,42 @@ $(function() {
 });
 
 
-
-//filter? narrow down to the ones that match the right protein selected in user input and make new array
-//output an answer by adding a new alert as a pop-up, or completing a sentence like "you should eat _________"
-
-//BONUS - randomly select a recipe from within the array/obj
-
-
-
 app.recipes = [
     {
-        name: 'rec1',
-        title: 'FastBeans',
+        name: 'Slow Cooker Vegetarian Chili',
         time: 'quickie',
-        protein: 'bean',
-        description: 'Witty description of the meal in less than 30 words followed by a link: ',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        protein: 'beans',
+        link:'https://www.gimmesomeoven.com/slow-cooker-vegetarian-chili-recipe/'
     },
     {
-        name: 'rec2',
+        name: 'Instant Pot Mexican Quinoa Bowl',
         time: 'oneHour',
-        protein: 'bean',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        protein: 'beans',
+        link: 'https://www.whereyougetyourprotein.com/mexican-quinoa-bowl/'
     },
     {
-        name: 'rec3',
+        name: 'Cauliflower and Mushroom Pot Pie with Black Olive Crust',
         time: 'sunday',
-        protein: 'bean',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        protein: 'beans',
+        link: 'http://www.geniuskitchen.com/recipe/cauliflower-and-mushroom-pot-pie-with-black-olive-crust-316577'
     },
     {
-        name: 'rec4',
+        name: 'Meal Prep Shrimp Taco Bowls',
         time: 'thirtyMins',
         protein: 'shrimp',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        link: 'https://gimmedelicious.com/2017/02/27/shrimp-taco-meal-prep-bowls/'
     }, 
     {
-        name: 'rec5',
+        name: 'Sheet Pan Curry Shrimp Meal Prep Bowls',
         time: 'oneHour',
         protein: 'shrimp',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        link: 'https://sweetcsdesigns.com/sheet-pan-curry-shrimp-meal-prep-bowls/'
     }, 
     {
-        name: 'rec6',
+        name: 'Shrimp Fried Rice',
         time: 'sunday',
         protein: 'shrimp',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        link: 'https://damndelicious.net/2017/03/10/shrimp-fried-rice-meal-prep/'
     },
     {
         name: 'Honey-Sriracha Glazed Meatballs',
@@ -118,33 +108,33 @@ app.recipes = [
         link:'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
     }, 
     {
-        name: 'rec8',
+        name: 'Meal Prep Chicken Burrito Bowls',
         time: 'oneHour',
         protein: 'bird',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/3'
+        link: 'https://gimmedelicious.com/2017/01/07/meal-prep-chicken-burrito-bowls/'
     }, 
     {
-        name: 'rec9',
+        name: 'Crockpot Creamy Cashew Chicken',
         time: 'sunday',
         protein: 'bird',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        link: 'https://www.halfbakedharvest.com/crockpot-creamy-cashew-chicken/'
     },
     {
-        name: 'rec10',
+        name: 'One Pot Spaghetti Squash and Meat Sauce',
         time: 'quickie',
         protein: 'redMeat',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        link: 'https://www.skinnytaste.com/one-pot-spaghetti-squash-and-meat-sauce-pressure-cooker-and-slow-cooker/'
     }, 
     {
-        name: 'rec11',
+        name: 'Meal Prep Carnitas Burrito Bowls',
         time: 'oneHour',
         protein: 'redMeat',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        link: 'https://www.yummly.com/recipe/Meal-Prep-Carnitas-Burrito-Bowls-2222415?prm-v1'
     }, 
     {
-        name: 'rec12',
+        name: 'Slow Cooker Pot Roast',
         time: 'sunday',
         protein: 'redMeat',
-        link: 'http://www.eatyourselfskinny.com/honey-sriracha-glazed-meatballs/'
+        link: 'https://www.recipetineats.com/slow-cooker-beef-pot-roast'
     }
 ];
