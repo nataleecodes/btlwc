@@ -6,15 +6,20 @@ body {
     background: #fafafa;
 }
 
-.container {
-    height: 100vh;
-    background-image: url("../assets/foodbkg.jpg");
-    max-width: 75%;
+.container, 
+.landing,
+.quizForm {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+}
+
+.container {
+    height: 100vh;
+    background-image: url("../assets/foodbkg-min.jpg");
+    background-size: cover;
+    display: flex;
     justify-content: center;
-    margin: 0 auto;
     background-size: cover;
 }
 
@@ -22,7 +27,40 @@ main {
     background: rgba(255, 255, 255, 0.99);
     padding: 70px;
     height: 80%;
-    max-width: 60%;
+    width: 67%;
+    overflow: hidden; 
+    border: 1px solid #c5d17b;
+}
+
+.landing__intro-blurb-wrapper, .questions{
+    width: 78%;
+    max-width: 390px;
+}
+
+.start {
+    display: block;
+}
+
+.start,
+input[type=submit]{
+    border: none;
+    border-radius: 0;
+    background: #ffdd22;
+    padding: 10px 20px;
+    font-weight: 900;
+    margin: 20px auto;
+    &:focus{
+        outline: 0;
+    }
+}
+
+.answer-wrapper p {
+    text-align: center;
+}
+
+.quizForm{
+    position: relative;
+    overflow: hidden;
 }
 
 .questions {
@@ -31,6 +69,10 @@ main {
     h2 {
         width: 100%;
     }
+}
+
+.hide{
+    display: none;
 }
 
 @media (max-width: 1200px) {

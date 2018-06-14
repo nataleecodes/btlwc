@@ -15,70 +15,88 @@
     <div class="container">
 
         <main>
-            <h1>Let's Get Cooking</h1>
-            <p>Meal prepping is an awesome way to save money and stay healthy. Use this quiz to home in on recipes that fit
-                your schedule & your tastes. Chop to it!</p>
-            <form class="quizForm" action="" method="GET">
-                <div class="questions question1">
-                    <h2>How much time do you have?</h2>
+            <!-- Landing Page -->
+            <div class="landing">
+                <!-- Headings -->
+                <h1>prep <br><span class="x-large-text">THIS!</span></h1>
+                <h2 class="landing__subtitle">Simplify your search for meal prep recipes</h2>
+                <!-- Intro Blurb -->
+                <div class="landing__intro-blurb-wrapper">
+                    <p>Use this quiz to home in on recipes for make-ahead meals that fit your schedule & your cravings.</p> 
+                    <p>Save money. Stay healthy. Meal prep! </p>
+                    <p>(Haven't heard of the meal prep fad? <a href="https://www.thekitchn.com/whats-the-difference-between-meal-planning-and-meal-prep-252953">Start here</a>.)</p>
+                </div>
+                <!-- Button to Start Quiz -->
+                <button class="start">
+                    Chop to it!
+                </button>
+            </div>
 
+            <!-- Quiz form -->
+            <form class="quizForm" action="" method="GET">
+                <!-- Question 1 -->
+                <div class="hide questions question1">
+                    <h2>How much time do you have?</h2>
+                    <!-- Option 1 for Question 1 -->
                     <div class="radio">
-                        <input id="quickie" name="time" type="radio" value="quickie" required checked="checked">
+                        <input id="quickie" name="time" type="radio" value="quickie" required>
                         <label for="quickie">Under 1 hr</label>
                     </div>
-
+                    <!-- Option 2 for Question 1 -->
                     <div class="radio">
-                        <input id="oneHour" name="time" type="radio" value="oneHour" required checked="checked">
+                        <input id="oneHour" name="time" type="radio" value="oneHour" required>
                         <label for="oneHour">1 to 2 hrs</label>
                     </div>
-
+                    <!-- Option 3 for Question 1 -->
                     <div class="radio">
-                        <input id="sunday" name="time" type="radio" value="sunday" required checked="checked">
-                        <label for="sunday">Sundays are sacred meal prep days</label>
+                        <input id="sunday" name="time" type="radio" value="sunday" required>
+                        <label for="sunday">All day! Bring it on!</label>
                     </div>
                 </div>
                 <!--END Question 1-->
 
-                <div class="questions question2">
+                <!-- Question 2 -->
+                <div class="hide questions question2">
                     <h2>Which protein do you prefer?</h2>
-
+                    <!-- Option 1 for Question 2 -->
                     <div class="radio">
-                        <input id="beans" name="protein" type="radio" value="beans" required checked="checked">
+                        <input id="beans" name="protein" type="radio" value="beans" required>
                         <label for="beans">Beans or tofu</label>
                     </div>
-
+                    <!-- Option 2 for Question 2 -->
                     <div class="radio">
-                        <input id="shrimp" name="protein" type="radio" value="shrimp" required checked="checked">
+                        <input id="shrimp" name="protein" type="radio" value="shrimp" required>
                         <label for="shrimp">Shrimp</label>
                     </div>
-
+                    <!-- Option 3 for Question 2 -->
                     <div class="radio">
-                        <input id="bird" name="protein" type="radio" value="bird" required checked="checked">
+                        <input id="bird" name="protein" type="radio" value="bird" required>
                         <label for="bird">Poultry</label>
                     </div>
-
+                    <!-- Option 4 for Question 2 -->
                     <div class="radio">
-                        <input id="redMeat" name="protein" type="radio" value="redMeat" required checked="checked">
+                        <input id="redMeat" name="protein" type="radio" value="redMeat" required>
                         <label for="redMeat">Red meat</label>
                     </div>
+                    <input type="submit" name="submit" value="Giddyup">
                 </div>
+            </form>    
                 <!--END Question 2 -->
 
-                <input type="submit" name="submit" value="Giddyup">
-            </form>
+                <div class="hide answer-wrapper">
+                    <p>This week try some
+                        <a id="answer-link" href="" target="_blank">
+                            <span id="answer">...</span>
+                        </a>
+                    </p>
+                    <!-- TODO: Improve twitter share button - show and prefill if possible -->
+                    <div class="social-container">
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+    
 
-            <div class="answer-wrapper">
-                <p>This week try some
-                    <a id="answer-link" href="" target="_blank">
-                        <span id="answer">...</span>
-                    </a>
-                </p>
-            </div>
-
-            <div class="social-container">
-                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
 
         </main>
 

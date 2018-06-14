@@ -1,16 +1,67 @@
 const app = {};
 
+app.hideDiv = function(divName){
+    $(`${divName}`).addClass('hide');
+}
+
+app.slideInItem = function(divName){
+    $(`${divName}`).removeClass('hide');
+    $(`${divName}`).addClass('animate-slideIn');
+}
+
+app.fadeOutItem = function(divName){
+    $(`${divName}`).addClass('animate-fadeOut'); 
+}
+
 app.events = function(){
+    $('.start').on('click touchstart', function(e) {
+        e.preventDefault();
+        console.log("Hide button");
+        app.hideDiv('.start');
+        app.hideDiv('.landing__intro-blurb-wrapper');
+        app.slideInItem('.question1');
+    });
+    $('input[name="time"]').on('change', function(e) {
+        e.preventDefault();
+        app.slideInItem('.question2');
+        app.fadeOutItem('.question1');
+        $('.question1').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+            function (e) {
+                $(this).addClass('hide');
+                // code to execute after animation ends
+            });
+    });
     //Get form input 
     $('form').on('submit', function(e) {
-    e.preventDefault();
-    //Save user input in variables
-    
-    const time = app.getTime();
-    const protein = app.getProtein();
-    const recipesSortedByTime = app.sortRecipesByTimeChosen(app.recipes, time);
-    const finalRecipe = app.sortRecipesByProteinChosen(protein, app.sortedRecipesByTime);
+        e.preventDefault();
+        $('.question2').addClass('animate-fadeOut');
+        $('.question2').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+            function (e) {
+                $(this).addClass('hide');
+                // code to execute after animation ends
+            });
+        $('.answer-wrapper').removeClass('hide');
+        $('.answer-wrapper').addClass('animate-slideIn');
+        //Save user input in variables
+        const time = app.getTime();
+        const protein = app.getProtein();
+        const recipesSortedByTime = app.sortRecipesByTimeChosen(app.recipes, time);
+        const finalRecipe = app.sortRecipesByProteinChosen(protein, app.sortedRecipesByTime);
     });
+    $('.reset').on('click', function() {
+        $('.animate-slideIn').removeClass('animate-slideIn');
+        $('.animate-fadeOut').removeClass('animate-fadeOut');
+        $('.start').removeClass('hide');
+        
+    });
+    //RESET BUTTON TODO:
+    //1. On click:
+    //A - remove hide from start button
+    //B - add hide to results display
+    //C - select all elements with class of .animate-slideIn and .animate-faceOut and remove classes
+    //D - form clear 
+    //E - fade in your landing screen stuff (new keyframes)
+
 };    
 
 app.getTime = function(){
@@ -32,7 +83,6 @@ app.sortRecipesByTimeChosen = function(recipesList, time){
             return recipe.time === time;
         })
         .map((recipe) => {
-           
             return recipe;
         });
     console.log(recipesSortedByTime);
