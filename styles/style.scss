@@ -41,6 +41,7 @@ main {
     display: block;
 }
 
+.resetBtn,
 .start,
 input[type=submit]{
     border: none;
@@ -48,6 +49,7 @@ input[type=submit]{
     background: #ffdd22;
     padding: 10px 20px;
     font-weight: 900;
+    display: block;
     margin: 20px auto;
     &:focus{
         outline: 0;

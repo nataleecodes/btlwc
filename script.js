@@ -43,18 +43,32 @@ app.events = function(){
         $('.answer-wrapper').removeClass('hide');
         $('.answer-wrapper').addClass('animate-slideIn');
         //Save user input in variables
-        const time = app.getTime();
-        const protein = app.getProtein();
-        const recipesSortedByTime = app.sortRecipesByTimeChosen(app.recipes, time);
-        const finalRecipe = app.sortRecipesByProteinChosen(protein, app.sortedRecipesByTime);
-    });
-    $('.reset').on('click', function() {
-        $('.animate-slideIn').removeClass('animate-slideIn');
-        $('.animate-fadeOut').removeClass('animate-fadeOut');
-        $('.start').removeClass('hide');
-        
+        let time = app.getTime();
+        let protein = app.getProtein();
+        let recipesSortedByTime = app.sortRecipesByTimeChosen(app.recipes, time);
+        let finalRecipe = app.sortRecipesByProteinChosen(protein, app.sortedRecipesByTime);
     });
     //RESET BUTTON TODO:
+    $('.resetBtn').on('click', function(e){
+        e.preventDefault();
+        console.log("resent button clicked")
+        //select all elements with class of .animate-slideIn and .animate-faceOut and remove classes
+        app.hideDiv('.answer-wrapper');
+        $('.landing__intro-blurb-wrapper').removeClass('hide');
+        $('.start').removeClass('hide');
+        $('.animate-slideIn').removeClass('animate-slideIn');
+        $('.animate-fadeOut').removeClass('animate-fadeOut');
+       
+        $('.question1').unbind();
+        $('.question2').unbind();
+         //form clear 
+        $('.quizForm')[0].reset();
+
+
+        // $("input:checked").removeAttr("checked");
+        // $('.quizForm').reset(); doesn't work in jquery
+        //fade in your landing screen stuff (new keyframes)
+    });
     //1. On click:
     //A - remove hide from start button
     //B - add hide to results display

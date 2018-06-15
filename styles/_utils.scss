@@ -28,7 +28,7 @@
     animation-name: fadeOut;
     animation-duration: 0.3s;
     animation-timing-function: ease-in;
-    // use absolute to move button out of space where new element slides in
+    // use absolute to move button out of space where new element slides in - remove from document flow so things can overlap rather than getting stuck on the button's corner
     position: absolute;
 }
 
