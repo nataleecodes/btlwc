@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="./assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Hind|Montserrat:900" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Let's Get Cooking</title>
+    <title>Prep This!</title>
 </head>
 
 <body>
@@ -78,18 +78,25 @@
                         <input id="redMeat" name="protein" type="radio" value="redMeat" required>
                         <label for="redMeat">Red meat</label>
                     </div>
-                    <input type="submit" name="submit" value="Giddyup">
+                    <!-- <input type="submit" name="submit" value="Giddyup"> -->
                 </div>
             </form>    
                 <!--END Question 2 -->
 
                 <div class="hide answer-wrapper">
-                    <p>This week try some
+                    <img src="" alt="" id="recipe-preview" class="answer-left">
+                    <div class="answer-right">
+                        <p>This week try</p>
+                        <p id="answer"></p>
+                        <p>from <span id="recipe-source"></span></p>
                         <a id="answer-link" href="" target="_blank">
-                            <span id="answer">...</span>
+                            Visit Recipe Page
                         </a>
-                    </p>
-                    <input type="reset" class="resetBtn"></input>
+                        <input type="reset" class="reset-btn" value="Search Again"></input>
+                    </div>
+                    <!-- <div class="reset-btn-container">
+                        <input type="reset" class="resetBtn"></input>
+                    </div> -->
                     <!-- TODO: Improve twitter share button - show and prefill if possible -->
                     <!-- <div class="social-container">
                         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
@@ -98,7 +105,7 @@
                 </div>
     
 
-
+        <footer class="hide">Code and design by: Natalee Blagden. Cooking icon by Tommy Lau from the Noun Project.</footer>
         </main>
 
     </div>
