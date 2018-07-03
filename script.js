@@ -36,10 +36,10 @@ app.getProtein = function () {
 //EVENTS
 app.events = function(){
     //Start the quiz on start button click
-    $('.start').on('click touchstart', function(e) {
+    $('#start-btn').on('click touchstart', function(e) {
         e.preventDefault();
-        app.hideDiv('.start');
-        app.hideDiv('.landing__intro-blurb-wrapper');
+        app.hideDiv('#start-btn');
+        app.hideDiv('.intro-section');
         app.slideInItem('.question1');
     });
     //On click in Question 1, hide Question 1 and reveal Question 2 with animations
@@ -61,9 +61,9 @@ app.events = function(){
         //     function(e) {
         //         $(this).addClass('hide');
         //     });
-        $('.answer-wrapper').removeClass('hide');
-        app.slideInItem('.answer-wrapper');
-        // $('.answer-wrapper').addClass('animate-slideIn');
+        $('.recipe-recco-section').removeClass('hide');
+        app.slideInItem('.recipe-recco-section');
+        // $('.recipe-recco-wrapper').addClass('animate-slideIn');
      
         //Call methods to fetch user input and save user input in variables
         let time = app.getTime();
@@ -73,21 +73,21 @@ app.events = function(){
     });
 
     //RESET BUTTON
-    $('.reset-btn').on('click', function(e){
+    $('#reset-btn').on('click', function(e){
         e.preventDefault();
         //Select all elements with class of .animate-slideIn and .animate-faceOut and remove classes
         $('.animate-slideIn').removeClass('animate-slideIn');
         $('.animate-fadeOut').removeClass('animate-fadeOut');
         //Hide the recommended recipe info (results) from the completed quiz
-        app.hideDiv('.answer-wrapper');
+        app.hideDiv('.recipe-recco-section');
         //Unhide the landing page contents and start button
-        $('.landing__intro-blurb-wrapper').removeClass('hide');
-        $('.start').removeClass('hide');
+        $('.intro-section').removeClass('hide');
+        $('#start-btn').removeClass('hide');
         //Unbind the answers to questions in the completed quiz
         $('.question1').unbind();
         $('.question2').unbind();
         //Clear form answers from previous quiz
-        $('.quizForm')[0].reset();
+        $('.quiz-form')[0].reset();
     });
 };    
 
@@ -117,10 +117,10 @@ app.sortRecipesByProteinChosen = function(protein, sortedRecipesByTime){
         });
     console.log(finalRecipe)
     console.log(finalRecipe[0].link);
-    $('#answer').text(`${finalRecipe[0].name}`);
-    $('#answer-link').attr('href', `${finalRecipe[0].link}`);
+    $('#quiz-result').text(`${finalRecipe[0].name}`);
     $('#recipe-preview').attr('src', `${finalRecipe[0].photo}`);
-    $('#recipe-source').text(`${finalRecipe[0].source}`);
+    $('#recipe-source-name').text(`${finalRecipe[0].source}`);
+    $('#recipe-source-link').attr('href', `${finalRecipe[0].link}`);
 };
 
 app.init = function () {
@@ -210,7 +210,7 @@ app.recipes = [
         photo: './assets/one-pot-spaghetti-squash.jpg',
         source: 'Skinnytaste',
         time: 'quickie',
-        protein: 'redMeat',
+        protein: 'red-meat',
         link: 'https://www.skinnytaste.com/one-pot-spaghetti-squash-and-meat-sauce-pressure-cooker-and-slow-cooker/'
     }, 
     {
@@ -218,7 +218,7 @@ app.recipes = [
         photo: './assets/meal-prep-carnitas-bowl1.jpg',
         source: 'Fit Foodie Finds',
         time: 'oneHour',
-        protein: 'redMeat',
+        protein: 'red-meat',
         link: 'https://fitfoodiefinds.com/meal-prep-carnitas-burrito-bowls/'
     }, 
     {
@@ -226,7 +226,7 @@ app.recipes = [
         photo: './assets/beef-pot-roast.jpg',
         source: 'Recipe Tin Eats',
         time: 'sunday',
-        protein: 'redMeat',
+        protein: 'red-meat',
         link: 'https://www.recipetineats.com/slow-cooker-beef-pot-roast'
     }
 ];

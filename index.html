@@ -11,110 +11,113 @@
     <title>Prep This!</title>
 </head>
 
-<body>
-    <div class="container">
-
-        <main>
-            <!-- Landing Page -->
-            <div class="landing">
-                <!-- Headings -->
-                <h1>prep <br><span class="x-large-text">THIS!</span></h1>
-                <h2 class="landing__subtitle">Simplify your search for meal prep recipes</h2>
-                <!-- Intro Blurb -->
-                <div class="landing__intro-blurb-wrapper">
-                    <p>Use this quiz to home in on recipes for make-ahead meals that fit your schedule & your cravings.</p> 
-                    <p>Save money. Stay healthy. Meal prep! </p>
-                    <p>(Haven't heard of the meal prep fad? <a href="https://www.thekitchn.com/whats-the-difference-between-meal-planning-and-meal-prep-252953">Start here</a>.)</p>
-                </div>
-                <!-- Button to Start Quiz -->
-                <button class="start">
-                    Chop to it!
-                </button>
-            </div>
-
-            <!-- Quiz form -->
-            <form class="quizForm" action="" method="GET">
-                <!-- Question 1 -->
-                <div class="hide questions question1">
-                    <h2>How much time do you have?</h2>
-                    <!-- Option 1 for Question 1 -->
-                    <div class="radio">
-                        <input id="quickie" name="time" type="radio" value="quickie" required>
-                        <label for="quickie">Under 1 hr</label>
-                    </div>
-                    <!-- Option 2 for Question 1 -->
-                    <div class="radio">
-                        <input id="oneHour" name="time" type="radio" value="oneHour" required>
-                        <label for="oneHour">1 to 2 hrs</label>
-                    </div>
-                    <!-- Option 3 for Question 1 -->
-                    <div class="radio">
-                        <input id="sunday" name="time" type="radio" value="sunday" required>
-                        <label for="sunday">All day! Bring it on!</label>
-                    </div>
-                </div>
-                <!--END Question 1-->
-
-                <!-- Question 2 -->
-                <div class="hide questions question2">
-                    <h2>Which protein do you prefer?</h2>
-                    <!-- Option 1 for Question 2 -->
-                    <div class="radio">
-                        <input id="beans" name="protein" type="radio" value="beans" required>
-                        <label for="beans">Beans or tofu</label>
-                    </div>
-                    <!-- Option 2 for Question 2 -->
-                    <div class="radio">
-                        <input id="shrimp" name="protein" type="radio" value="shrimp" required>
-                        <label for="shrimp">Shrimp</label>
-                    </div>
-                    <!-- Option 3 for Question 2 -->
-                    <div class="radio">
-                        <input id="bird" name="protein" type="radio" value="bird" required>
-                        <label for="bird">Poultry</label>
-                    </div>
-                    <!-- Option 4 for Question 2 -->
-                    <div class="radio">
-                        <input id="redMeat" name="protein" type="radio" value="redMeat" required>
-                        <label for="redMeat">Red meat</label>
-                    </div>
-                    <!-- <input type="submit" name="submit" value="Giddyup"> -->
-                </div>
-            </form>    
-                <!--END Question 2 -->
-
-                <div class="hide answer-wrapper">
-                    <img src="" alt="" id="recipe-preview" class="answer-left">
-                    <div class="answer-right">
-                        <p>This week try</p>
-                        <p id="answer"></p>
-                        <p>from <span id="recipe-source"></span></p>
-                        <a id="answer-link" href="" target="_blank">
-                            Visit Recipe Page
-                        </a>
-                        <input type="reset" class="reset-btn" value="Search Again"></input>
-                    </div>
-                    <!-- <div class="reset-btn-container">
-                        <input type="reset" class="resetBtn"></input>
-                    </div> -->
-                    <!-- TODO: Improve twitter share button - show and prefill if possible -->
-                    <!-- <div class="social-container">
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div> -->
-                </div>
+<body class="wallpaper">
     
+    <main>
+        <!--Header STARTS-->
+        <!--Logo area that stays on the page throughout quiz-->
+        <header class="header">
+            <h1 class="header__logo">prep
+                <br>
+                <span class="header__logo header__logo--xlarge">THIS!</span>
+            </h1>
+            <h2 class="header__subtitle">Simplify your search for meal prep recipes</h2>
+        </header><!--Header ENDS-->
 
-        <footer class="hide">Code and design by: Natalee Blagden. Cooking icon by Tommy Lau from the Noun Project.</footer>
-        </main>
 
-    </div>
-    <!--END BKG CONTAINER-->
+        <!--Intro Section STARTS-->
+        <!--Explanatory blurb that disappears when quiz starts-->
+        <section class="intro-section">                
+            <p class="intro-section__description">Use this quiz to home in on recipes for make-ahead meals that fit your schedule & your cravings. Save money. Stay healthy. Meal prep! </p>
+            <p class="intro-section__description intro-section__description--subtle">Haven't heard of the meal prep trend?
+                <a class="intro-section__link" href="https://www.thekitchn.com/whats-the-difference-between-meal-planning-and-meal-prep-252953 ">Start here</a>.
+            </p>
+            <button class="btn btn-primary" id="start-btn"><!--Click to start the quiz-->
+                Chop to it!
+            </button>
+        </section> <!--Intro Section ENDS-->
+        
+
+        <!--Quiz Section STARTS-->
+        <section class="quiz-section">
+            <form class="quiz-form" action="" method="GET">
+
+                <!--Question 1 STARTS - Get user's preferred cooking time-->
+                <fieldset class="quiz-form__question question1 hide">
+                    <h2 class="quiz-form__question-heading">How much time do you have?</h2>
+
+                    <!--Time Option 1 "QUICKIE RECIPE"-->
+                    <div class="quiz-form__radio-btn-container">
+                        <input class="quiz-form__radio-btn-input" id="quickie" name="time" type="radio" value="quickie" required>
+                        <label class="quiz-form__radio-btn-label" for="quickie">Under 1 hr</label>
+                    </div>
+
+                    <!--Time Option 2 "ONE HOUR RECIPE"-->
+                    <div class="quiz-form__radio-btn-container">
+                        <input class="quiz-form__radio-btn-input" id="oneHour" name="time" type="radio" value="oneHour" required>
+                        <label class="quiz-form__radio-btn-label" for="oneHour">1 to 2 hrs</label>
+                    </div>
+
+                    <!--Time Option 3 "LONG RECIPE"-->
+                    <div class="quiz-form__radio-btn-container">
+                        <input class="quiz-form__radio-btn-input" id="sunday" name="time" type="radio" value="sunday" required>
+                        <label class="quiz-form__radio-btn-label" for="sunday">All day! Bring it on!</label>
+                    </div>
+                </fieldset><!--Question 1 ENDS-->
+
+                <!--Question 2 STARTS - Get user's preferred meat/protein source-->
+                <fieldset class="quiz-form__question question2 hide">
+                    <h2 class="quiz-form__question-heading">Which protein do you prefer?</h2>
+
+                    <!--Protein Option 1 "BEANS OR TOFU"-->
+                    <div class="quiz-form__radio-btn-container">
+                        <input class="quiz-form__radio-btn-input" id="beans" name="protein" type="radio" value="beans" required>
+                        <label class="quiz-form__radio-btn-label" for="beans">Beans or tofu</label>
+                    </div><!--Option 1 ends-->
+
+                    <!--Protein Option 2 "SHRIMP"-->
+                    <div class="quiz-form__radio-btn-container">
+                        <input class="quiz-form__radio-btn-input" id="shrimp" name="protein" type="radio" value="shrimp" required>
+                        <label class="quiz-form__radio-btn-label" for="shrimp">Shrimp</label>
+                    </div>
+
+                    <!--Protein Option 3 "POULTRY"-->
+                    <div class="quiz-form__radio-btn-container">
+                        <input class="quiz-form__radio-btn-input" id="bird" name="protein" type="radio" value="bird" required>
+                        <label class="quiz-form__radio-btn-label" for="bird">Poultry</label>
+                    </div>
+
+                    <!--Protein Option 4 "RED MEAT"-->
+                    <div class="quiz-form__radio-btn-container">
+                        <input class="quiz-form__radio-btn-input" id="red-meat" name="protein" type="radio" value="red-meat" required>
+                        <label class="quiz-form__radio-btn-label" for="red-meat">Red meat</label>
+                    </div>
+                </fieldset><!--Question 2 ENDS-->
+            </form>    
+        </section>
+            
+        <!--Recipe Recommendation Section STARTS-->
+        <section class="recipe-recco-section hide">  
+            <div class="recipe-recco-photo">
+                <img class="recipe-recco-photo__img" src="" alt="preview photo of a meal prep recipe" id="recipe-preview">
+            </div>
+            <div class="recipe-recco-details">
+                <p class="recipe-recco-details__secondary-text">This week try</p>
+                <p id="quiz-result"></p>
+                <p class="recipe-recco-details__secondary-text">from <span id="recipe-source-name"></span></p>
+                <a class="btn btn-primary" id="recipe-source-link" href="" target="_blank">
+                    Visit Recipe Page
+                </a>
+                <input type="reset" class="btn btn-secondary" id="reset-btn" value="Search Again"></input>
+            </div>
+        </section><!--Quiz Result Section ENDS-->
+
+        <footer class="footer hide">Code and design by: Natalee Blagden.</footer>
+    
+    </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="script.js"></script>
-
-
-</body>
+</body><!--Wallpaper ENDS-->
 
 </html>
