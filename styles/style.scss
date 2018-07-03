@@ -91,12 +91,13 @@ main {
 #start-btn {
     display: block;
     max-width: 135px;
+    position: relative;
 }
 
 .btn-primary{
     margin: 6% auto 0 auto;
     border: none;
-    background: #ffdd22;
+    background: $yellow;
     padding: 10px 20px;
     font-weight: 900;
     width: 70%;
@@ -124,6 +125,7 @@ main {
     position: relative;
     align-items: center;
     justify-content: center;
+    width: 80%;
     max-width: 1300px;
     padding: 2% 0 1% 0;
     border: 1px solid black;
@@ -201,7 +203,7 @@ main {
     }
 }
 
-/* Landscape phone to portrait tablet */
+/* Portrait tablet and down */
 @media (max-width: 780px) {
     .recipe-recco-section{
         width: 100%;
@@ -228,86 +230,3 @@ main {
         }
     }
 }
-//TODO:
-//Change main width and padding/margin on inside, purple
-//Lower font sizes especially on logo 
-//Reorder elements in recipe-recco to 100% width or flex column (make column)
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
-}
-//Change main width and padding
-//Make sure everything is column
-//Maybe drop the logo on the last screen? Drop size SIGNIFICANTLY, at least, and RESET IT or replace it
-
-
-// 3.2 Tablet Breakpoint
-// @media (max-width: 700px){
-//     .container{
-//         main{
-//             padding: 3%;
-//             height: 92%;
-//             max-height: 540px;
-//             width: 100%;
-//             border: none;
-//             .landing-page{
-//                 margin-top: 0;
-//             }
-//             h1{
-//                 font-size: 2.5rem;
-//                 line-height: 5rem;
-//             }
-//             .x-large-text {
-//                 font-size: 6.6rem;
-//                 line-height: 4rem;
-//             }
-//             h2.landing-page__subtitle{
-//                 width: 90%;
-//             }
-//             .quizForm .questions{
-//                 width: 100%;
-//                 h2{
-//                     font-size: 2.7rem;
-//                     line-height: 3.2rem;
-//                 }
-//             }
-//             .answer-wrapper{
-//                 margin-top: 3.5%;
-//                 margin-bottom: 2.5%;
-//             }
-//             .answer-left{
-//                 width: 88%;
-//                 max-height: 90px;
-//             }
-//             .answer-right{
-//                 p{
-//                     padding: 0;
-//                     margin: 2% 0;
-//                 }
-//                 #answer{
-//                     margin: 0;
-//                     font-size: 2.2rem;
-//                     line-height: 2.5rem;
-//                     text-align: center;
-//                 }
-//                 width: 100%;
-//                 display: flex;
-//                 flex-flow: column wrap;
-//                 align-items: center;
-//                 margin-left: 0;
-//                 #answer-link{
-//                     width: 58%;
-//                     font-size: 1.5rem;
-//                     text-align: center;
-//                     padding: 2%;
-//                 }
-//             }
-//             .answer-wrapper{
-//                 margin-top: 5%;
-//                 padding: 2%;
-//                 box-shadow: 0 5px 8px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-//             }
-//         }
-//     }
-// }
-
